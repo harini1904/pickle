@@ -274,7 +274,7 @@ public class TestArray {
 public static void main(String args[])
 {
 	TestArray ex = new TestArray();
-	/*ex.ReverseArray();
+	ex.ReverseArray();
 	System.out.println();
 	ex.ArraySum();
 	System.out.println();
@@ -283,7 +283,7 @@ public static void main(String args[])
 	ex.sortarray();
 	System.out.println();
 	ex.findrange();
-	System.out.println();*/
+	System.out.println();
 	ex.findmaxmin();
 	System.out.println();
 }
