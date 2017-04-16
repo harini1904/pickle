@@ -32,7 +32,7 @@ public int x,max,i,count;
 	
 	public void findcount(int arr[])
 	{
-		//logic is put based on the assumption that the array will always be a sorted array.
+		//logic is put based on an assumption that only sorted input will be provided
 		for(i=0;i<max;i++)
 		{
 			if(arr[i]==x)
