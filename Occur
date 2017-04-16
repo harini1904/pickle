@@ -1,0 +1,56 @@
+import java.util.*;
+
+public class Occur {
+public int x,max,i,count;
+	public void getinput()
+	{
+		Scanner s = new Scanner(System.in);
+		try
+		{
+			System.out.print("Enter the array size:");
+			max = s.nextInt();
+			while(max<=0)
+			{
+				System.out.println("Enter a positive number");
+				System.out.print("Enter the array size:");
+				max = s.nextInt();
+			}
+			int arr1[] =  new int[max];
+			System.out.println("Enter values:");
+			for(i=0;i<max;i++)
+				arr1[i]=s.nextInt();		
+			System.out.print("Enter a number (X) to find its number of occurrences: ");
+			x = s.nextInt();
+			findcount(arr1);
+		}
+		catch(InputMismatchException nf)
+		{
+			System.out.println("Non Integer value entered. Program terminated");
+		
+		}
+	}
+	
+	public void findcount(int arr[])
+	{
+		//logic is put based on the assumption that the array will always be a sorted array.
+		for(i=0;i<max;i++)
+		{
+			if(arr[i]==x)
+			{
+				count++;
+				continue;
+			}
+			else if((arr[i]<x && x>0) || (arr[i]>x && x<0))
+			continue;
+			else
+				break;
+		}
+		System.out.println(x+" occurred "+count+" times in array.");
+	}
+	
+	public static void main(String[] args)
+	{
+		Occur oc = new Occur();
+		oc.getinput();
+	}
+}
